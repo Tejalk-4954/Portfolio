@@ -1,0 +1,43 @@
+.skills {
+background: #272f4c;
+  color: white;
+  padding: 30px;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 0;
+}
+
+.skill-name {
+  width: 180px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: #1b2d5a;
+  border-radius: 10px;
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #00aaff;
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+.percent-tag {
+  width: 60px;
+  text-align: right;
+  font-size: 18px;
+  color: #fff;
+}
