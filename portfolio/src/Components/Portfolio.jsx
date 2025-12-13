@@ -13,13 +13,13 @@ const projectsData = [
         imageSrc: "src/assets/drainage.jpg", 
         githubUrl: "http://localhost:8080/Drainage_Blockage/"
     },
-    // { 
-    //     id: 2,
-    //     title: "Recipe Finder App", 
-    //     description: "React application to search for and display various cooking recipes.",
-    //     imageSrc: "src/assets/project-recipe.webp", 
-    //     githubUrl: "https://github.com/yourusername/recipe-app-repo"
-    // },
+    { 
+        id: 2,
+        title: "My Portfolio", 
+        description: "react application that shows information about me .",
+        imageSrc: "src/assets/7.png", 
+        githubUrl: "https://github.com/Tejalk-4954/Portfolio"
+    },
     // { 
     //     id: 3,
     //     title: "Personal Blog Site", 
