@@ -1,43 +1,161 @@
-.skills {
-background: #272f4c;
-  color: white;
-  padding: 30px;
-  min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+/* SkillsPage.css - CORRECTED */
+
+/* --- Overall Page Background (Matching the surrounding portfolio page) --- */
+
+
+/* --- Content Container (This is the dark area from your original design) --- */
+.skills-container {
+    /* background-color: #262B40; Dark background color for the skills block */
+    color: #ffffff; /* White text color */
+    padding: 50px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    
+    /* NEW: Constrain the width of the dark content block to match other pages */
+    max-width: 1200px; /*Adjust this value to match the max-width of your main portfolio content */
+    margin: 0 auto;/* Center the container horizontally*/
 }
 
-.skill-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 18px 0;
+.skills-title {
+    color: #4dc2ff; /* A bright blue for the title */
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
 }
 
-.skill-name {
-  width: 180px;
-  font-size: 18px;
-  color: #fff;
+/* The inner flex container for the Technical/Professional split */
+.skills-content {
+    display: flex;
+    max-width: 1000px; /* Inner width constraint for the columns */
+    margin: 0 auto; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skills-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #333;
+}
+
+/* --- Technical Skills (Linear Bars) --- */
+
+.technical-skill-item {
+    margin-bottom: 25px;
+}
+
+.technical-skill-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    justify-content: space-between;
+    font-size: 2em;
+    
+}
+
+.technical-skill-name span:nth-child(1)::before {
+    /* Placeholder for the colored icon/dot */
+    content: '•';
+    font-size: 1.5em;
+    margin-right: 10px;
+    line-height: 0;
+    color: #4dc2ff; /* Icon color matching the theme */
+}
+
+.technical-skill-name span:nth-child(2) {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #4dc2ff;
+}
+
+.progress-bar-container {
+    height: 8px;
+    background-color: #333; /* Darker track */
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .progress-bar {
-  flex: 1;
-  height: 10px;
-  background: #1b2d5a;
-  border-radius: 10px;
-  margin: 0 15px;
-  overflow: hidden;
+    height: 100%;
+    background-color: #4dc2ff; /* Bright blue progress color */
+    transition: width 0.8s ease-in-out;
+    border-radius: 4px;
 }
 
-.progress-fill {
-  height: 100%;
-  background: #00aaff;
-  border-radius: 10px;
-  transition: width 1s ease;
+/* --- Professional Skills (Circular Bars) --- */
+
+.professional-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px;
 }
 
-.percent-tag {
-  width: 60px;
-  text-align: right;
-  font-size: 18px;
-  color: #fff;
+.circular-skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circular-skill-name {
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* SVG and Circular Progress Styles (unchanged from previous) */
+.circular-progress-bar {
+    position: relative;
+    width: 120px; 
+    height: 120px;
+}
+
+.circular-progress-bar circle {
+    fill: none;
+    stroke-width: 7; 
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg); 
+}
+
+.circular-progress-bar .circle-bg {
+    stroke: #333; 
+}
+
+.circular-progress-bar .circle-progress {
+    stroke: #4dc2ff; 
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.8s ease-in-out;
+}
+
+.circular-progress-bar .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4dc2ff;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .skills-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .professional-skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
