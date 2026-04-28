@@ -30,9 +30,8 @@ const Home = () => {
                 <SocialMedia />
                 <a href="/Tejal__kauthe_resume.pdf" download="tejal__kauthe_resume.pdf" className="btn">Download Resume</a>
             </div>
-            
             <div className="home-img">
-                <img src="src/assets/1.jpg" alt="Anjali Barkule" />
+                <img src="src/assets/1.jpg" alt="Tejal Kavthe" />
             </div>
         </section>
     );

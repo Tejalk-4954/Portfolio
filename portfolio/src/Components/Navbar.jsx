@@ -47,14 +47,6 @@ const Navbar = () => {
     return (
         <header className="header">
             <a href="#home" className="logo">Portfolio</a>
-            
-            {isMenuOpen && <FaXmark 
-                className="menu-icon fa-xmark"
-                id="menu-icon"
-                onClick={toggleMenu}
-                style={{ display: 'block' }} 
-            />}
-
             <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
                 <a href="#home" onClick={handleNavLinkClick} className={activeSection === 'home' ? 'active' : ''}>Home</a>
                 <a href="#about" onClick={handleNavLinkClick} className={activeSection === 'about' ? 'active' : ''}>About</a>

@@ -10,8 +10,6 @@
     padding: 50px 20px;
     box-sizing: border-box;
     width: 100%;
-    
-    /* NEW: Constrain the width of the dark content block to match other pages */
     max-width: 1200px; /*Adjust this value to match the max-width of your main portfolio content */
     margin: 0 auto;/* Center the container horizontally*/
 }
@@ -22,6 +20,7 @@
     text-align: center;
     margin-bottom: 50px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /* The inner flex container for the Technical/Professional split */
@@ -61,7 +60,6 @@
     font-weight: bold;
     justify-content: space-between;
     font-size: 2em;
-    
 }
 
 .technical-skill-name span:nth-child(1)::before {
@@ -110,9 +108,52 @@
 }
 
 .circular-skill-name {
-    margin-top: 10px;
-    font-size: 1em;
-    font-weight: bold;
+        margin-top: 10px;
+        font-size: 1em;
+        font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .skills-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .skills-section {
+        min-width: 200px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 30px 5px;
+    }
+    .skills-title {
+        font-size: 2em;
+    }
+    .section-title {
+        font-size: 1.2em;
+    }
+    .professional-skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        padding: 15px 2px;
+        border-radius: 0.5rem;
+    }
+    .skills-title {
+        font-size: 1.3em;
+    }
+    .skills-section {
+        padding: 8px;
+        border-radius: 0.5rem;
+    }
 }
 
 /* SVG and Circular Progress Styles (unchanged from previous) */
